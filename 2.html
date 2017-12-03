@@ -15,34 +15,24 @@
     </header>
     
     <p>
-        Task: Bir iş için TOBB ETÜ'de bir toplantıya gittiniz. İşleriniz çok yoğun olduğu için en yakın oteli bulup, şuan rezervasyon yaptırmanız gerekmektedir. En yakın oteli bulmak için asağıda verilen butonu (En yakın oteli bul - Sizi en yakın otele yönlendirmektedir.) kullanmalısınız. Sizden bu oteli bulup rezervasyon yaptırmanız beklenmektedir.
+        Task: Burayı degistir.
         
 
     <p>
         <br><br>
-	        <img src="map.png" alt="Map View">
+	        <img src="borsa.jpg" alt="Borsa View">
     </p>
         <br><br>
-        <button onclick="getLocation(); asd();">En yakın oteli bul</button>
+        <button onclick="asd();">Borsa şeylerini gör</button>
     </p>
     <script type="text/javascript">
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
-        function showPosition(position) {
-            
-        }
     </script>
     <script type="text/javascript">
 
-	
     function redirect() {
-   	window.location.replace('http://www.jwmarriott-ankara.com/');
+   	window.location.replace('https://www.foreks.com/');
     }
+
     function asd() {
 
     var audioContext = new AudioContext();
@@ -61,14 +51,14 @@
                           navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
     if (navigator.getUserMedia){
-	
+
         navigator.getUserMedia({audio:true}, 
           function(stream) {
-              redirect();
-              // start_microphone(stream);
+		redirect();
+              //start_microphone(stream);
           },
           function(e) {
-            redirect();
+		redirect();
           }
         );
 
